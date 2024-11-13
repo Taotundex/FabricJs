@@ -15,7 +15,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
 // const Rect = fabric.Rect;
 
-const page = () => {
+export default function Page() {
     const [selectedSection, setSelectedSection] = useState('templates');
     const handleSectionClick = (section) => {
         setSelectedSection(section);
@@ -224,4 +224,4 @@ const page = () => {
   )
 }
 
-export default page
+// export default page
