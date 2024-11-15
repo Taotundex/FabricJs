@@ -45,7 +45,7 @@ export default function Page() {
     useEffect(() => {
         if (canvasRef.current) {
             const initCanvas = new Canvas(canvasRef.current, {
-                width: 1000,
+                width: 900,
                 height: 500,
                 backgroundColor: '#fff',
             });
@@ -279,8 +279,8 @@ export default function Page() {
         }
     };
   return (
-    <div className='new text-black'>
-        <div className="grid grid-cols-4 gap-5">
+    <div className='new text-black lg:w-[85%] md:w-[90%] w-[95%] mx-auto my-5'>
+        <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 lg:gap-5 gap-3">
             <div className="styles col-span-1">
                 <div className="grid grid-cols-4 gap-4">
                     <div className="stylings col-span-1 flex flex-col bg-white rounded-[10px] p-5 gap-3">
@@ -617,21 +617,21 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <div className="col-span-3 p-5">
+            <div className="lg:col-span-3 col-span-1 lg:p-5 md:p-3 p-0">
                 <h2 className='text-[20px] flex items-center justify-center font-medium bg-transparent'>Preview</h2>
                 <div className="bg-white p-5 flex flex-col gap-3">
                     <div className="flex items-center justify-between px-5 h-[50px] rounded-[10px] bg-black">
                         <h3 className='font-medium text-lg text-white'>Verse Mapping</h3>
                         <p className='text-sm text-white'>John 3:16 (ESV)</p>
                     </div>
-                    <div className="canvas">
+                    <div className="canvas w-full">
                         <canvas className='rounded-[10px]' id='canvas' ref={canvasRef}></canvas>
                     </div>
                 </div>
             </div>
         </div>
-        <div className="toolbar darkmode ">
-        </div>
+        {/* <div className="toolbar darkmode ">
+        </div> */}
     </div>
   )
 }

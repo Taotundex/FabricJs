@@ -28,8 +28,9 @@ body {
   width: 100%;
   height: 100vh;
 } */
-canvas {
-  /* width: 100%; */
+#canvas {
+  /* width: 100%;
+  height: 500px; */
   border: 1.5px solid #BDBDC1;
   z-index: 2;
 }
@@ -51,3 +52,11 @@ canvas {
  .arrow-mg {
   width: 50px;
  }
+
+
+ /* @media screen and (max-width: 767px){
+  #canvas {
+  width: 100%;
+  height: 300px;
+}
+ } */
