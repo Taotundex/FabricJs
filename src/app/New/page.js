@@ -13,10 +13,14 @@ import Image from 'next/image';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 
 
+<<<<<<< HEAD
 import { handleObjectMoving, clearGuidelines } from '../components/SnappingHelpers';
 
 export default function Page() {
     const [guidelines, setGuidelines] = useState([]);
+=======
+export default function Page() {
+>>>>>>> cbded9af8921ba969f78c31a32f6b60a2bfde364
     const [selectedSection, setSelectedSection] = useState('templates');
     const [canvas, setCanvas] = useState(null);
     const [lineWidth, setLineWidth] = useState(1);
