@@ -86,6 +86,7 @@ export default function Page() {
     // };
 
     const addRectangle = () => {
+        canvas.isDrawingMode = false;
         if (canvas) {
             const rect = new Rect({
                 top: 100,
@@ -99,6 +100,7 @@ export default function Page() {
     };
 
     const addCircle = () => {
+        canvas.isDrawingMode = false;
         if (canvas) {
             const circle = new Circle({
                 top: 100,
@@ -111,6 +113,7 @@ export default function Page() {
     };
 
     const addTriangle = () => {
+        canvas.isDrawingMode = false;
         if (canvas) {
             const triangle = new Triangle({
                 top: 100,
@@ -124,6 +127,7 @@ export default function Page() {
     };
 
     const addStar = () => {
+        canvas.isDrawingMode = false;
         if (canvas) {
             const points = [
                 { x: 50, y: 0 }, { x: 60, y: 35 }, { x: 100, y: 35 },
@@ -143,6 +147,7 @@ export default function Page() {
     };
 
     const addText = () => {
+        canvas.isDrawingMode = false;
         if (canvas) {
             const text = new IText('Edit me', {
                 left: 100,
@@ -157,6 +162,7 @@ export default function Page() {
         }
     };
     const changeFontSize = (size) => {
+        canvas.isDrawingMode = false;
         const activeObject = canvas?.getActiveObject();
         if (activeObject && activeObject.type === 'i-text') {
             activeObject.set({ fontSize: parseInt(size) });
@@ -179,6 +185,7 @@ export default function Page() {
     };
     
     const addLine = () => {
+        canvas.isDrawingMode = false;
         if (canvas) {
             const line = new Line([50, 50, 200, 200], {
                 stroke: 'black',
@@ -212,6 +219,7 @@ export default function Page() {
     };
 
     const updateFillColor = () => {
+        canvas.isDrawingMode = false;
         const activeObject = canvas?.getActiveObject();
         if (activeObject && activeObject.fill) {
             setFillColor(activeObject.fill);
@@ -219,6 +227,7 @@ export default function Page() {
     };
 
     const applyFillColor = (color) => {
+        canvas.isDrawingMode = false;
         setFillColor(color);
         const activeObject = canvas?.getActiveObject();
         if (activeObject && 'fill' in activeObject) {
@@ -229,6 +238,7 @@ export default function Page() {
 
     
     const addArrow = (canvas, x1, y1, x2, y2, color = 'black') => {
+        canvas.isDrawingMode = false;
         if (!canvas) return; // Guard against null or undefined canvas
 
         const line = new Line([x1, y1, x2, y2], {
@@ -274,6 +284,7 @@ export default function Page() {
     };
 
     const handleAddArrow = () => {
+        canvas.isDrawingMode = false;
         if (canvasRef.current) {
             addArrow(canvasRef.current, 50, 50, 200, 200, 'red');
         }
