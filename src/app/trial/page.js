@@ -249,9 +249,7 @@ const addLine = () => {
 
   return (
     <div className='new text-black px-10 mx-auto my-5 grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 lg:gap-5 gap-3'>
-
-
-        <div className="styles col-span-1">
+       <div className="styles col-span-1">
                 <div className="grid grid-cols-4 gap-4">
                     <div className="stylings col-span-1 flex flex-col bg-white rounded-[10px] p-5 gap-3">
      
